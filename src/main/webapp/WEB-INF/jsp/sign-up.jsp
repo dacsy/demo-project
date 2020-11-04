@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://www.springframework.org/tags"%>
 <html>
 <body>
 <h1>Registry User</h1>

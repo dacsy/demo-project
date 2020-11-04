@@ -1,7 +1,7 @@
 package remitano.dacsyle.demo.service;
 
 import remitano.dacsyle.demo.dto.User;
-import remitano.dacsyle.demo.model.user.UserModel;
+import remitano.dacsyle.demo.model.UserModel;
 
 
 public interface UserService
@@ -19,4 +19,5 @@ public interface UserService
 	 * @return
 	 */
 	User findByUserName(String userName);
+
 }

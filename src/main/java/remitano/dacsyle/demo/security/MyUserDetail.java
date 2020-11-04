@@ -2,7 +2,7 @@ package remitano.dacsyle.demo.security;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import remitano.dacsyle.demo.model.user.UserModel;
+import remitano.dacsyle.demo.model.UserModel;
 
 import java.util.Collection;
 

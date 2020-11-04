@@ -23,7 +23,8 @@ public class SecurityConfigure extends WebSecurityConfigurerAdapter
 		http.authorizeRequests()
 				.antMatchers(HttpMethod.GET, "/registration").permitAll()
 				.antMatchers(HttpMethod.POST,"/registration").permitAll()
-				.antMatchers("/home/**").authenticated()
+				.antMatchers("/").permitAll()
+				.antMatchers("/share-movie/**").authenticated()
 				.and().formLogin();
 		http.csrf().disable();
 	}

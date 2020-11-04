@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import remitano.dacsyle.demo.dto.User;
 import remitano.dacsyle.demo.converter.UserConverter;
-import remitano.dacsyle.demo.model.user.UserModel;
+import remitano.dacsyle.demo.model.UserModel;
 import remitano.dacsyle.demo.repository.UserRepository;
 import remitano.dacsyle.demo.service.UserService;
 

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import remitano.dacsyle.demo.dto.User;
-import remitano.dacsyle.demo.model.user.UserModel;
+import remitano.dacsyle.demo.model.UserModel;
 import remitano.dacsyle.demo.service.UserService;
 
 import javax.websocket.server.PathParam;

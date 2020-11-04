@@ -1,7 +1,7 @@
 package remitano.dacsyle.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import remitano.dacsyle.demo.model.user.UserModel;
+import remitano.dacsyle.demo.model.UserModel;
 
 import java.util.Optional;
 
