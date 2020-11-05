@@ -1,7 +1,10 @@
 package remitano.dacsyle.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import remitano.dacsyle.demo.dto.Movie;
@@ -18,7 +21,10 @@ public class ShareMovieController
 	MovieService movieService;
 
 	@RequestMapping(value = "/share", method = RequestMethod.GET)
-	public String shareMoviePage() {
+	public String shareMoviePage(Model model) {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		model.addAttribute("isAuthenticated", !authentication.getPrincipal().equals("anonymousUser"));
+		model.addAttribute("userName", authentication.getName());
 		return "share-movie";
 	}
 
