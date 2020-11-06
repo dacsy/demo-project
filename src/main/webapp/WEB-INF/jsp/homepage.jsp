@@ -21,14 +21,13 @@
 </div>
 <div class="container">
     <c:forEach items="${movies}" var="movie">
-        <div class="row mb-3">
+        <div class="row mb-3" style="height: 390px">
             <div class="col-md-4 order-md-2 mb-4">
                 <h4 class="">${movie.title}</h4>
                 <label>${movie.description}</label>
             </div>
-            <div class="col-md-8 order-md-1">
-                <iframe title="YouTube video player" class="youtube-player" type="text/html" width="640"
-                        height="390" src="https://www.youtube.com/embed/${movie.embedId}" frameborder="0"
+            <div class="col-md-8 order-md-1 embed-responsive embed-responsive-21by9">
+                <iframe class="embed-responsive-item" type="text/html" src="https://www.youtube.com/embed/${movie.embedId}" frameborder="0"
                         allowFullScreen>
                 </iframe>
             </div>
