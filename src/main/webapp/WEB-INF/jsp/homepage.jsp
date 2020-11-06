@@ -28,7 +28,7 @@
             </div>
             <div class="col-md-8 order-md-1">
                 <iframe title="YouTube video player" class="youtube-player" type="text/html" width="640"
-                        height="390" src="http://www.youtube.com/embed/${movie.embedId}" frameborder="0"
+                        height="390" src="https://www.youtube.com/embed/${movie.embedId}" frameborder="0"
                         allowFullScreen>
                 </iframe>
             </div>
