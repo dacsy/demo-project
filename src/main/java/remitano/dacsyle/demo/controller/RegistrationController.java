@@ -1,6 +1,7 @@
 package remitano.dacsyle.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,17 +27,16 @@ public class RegistrationController
 	}
 
 	@RequestMapping(value = "/registration", method = RequestMethod.POST)
-	public String registry(@PathParam("userName") String userName, @PathParam("password") String password, Model model) {
+	public String registry(@PathVariable("username") User newUser, Model model) {
 
-		User user = userService.findByUserName(userName);
-		if (user != null) {
-			model.addAttribute("errorMsg", "User already existed");
-			return "redirect:/login";
+		User existedUser = userService.findByUserName(newUser.getUserName());
+		if (existedUser != null) {
+			return "redirect:/registration";
 		}
 		UserModel userModel = new UserModel();
 		userModel.setActive(Boolean.TRUE);
-		userModel.setPassword(cryptPasswordEncoder.encode(password));
-		userModel.setUserName(userName);
+		userModel.setPassword(cryptPasswordEncoder.encode(newUser.getPassword()));
+		userModel.setUserName(newUser.getUserName());
 		userService.registration(userModel);
 		return "redirect:/login";
 	}

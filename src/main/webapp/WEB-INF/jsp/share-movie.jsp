@@ -27,7 +27,8 @@
         <div class="row">
             <div class="col-md-8 mb-3">
                 <label class="col-md-3 mb-3">Youtube URL</label>
-                <input class="col-md-5 mb-3" id="youtubeUrl" name="youtubeUrl"/>
+                <input class="col-md-5 mb-3" id="youtubeUrl" name="youtubeUrl" required
+                       onemptied="this.setCustomValidity('Please input youtube URL')"/>
             </div>
         </div>
         <div class="row">

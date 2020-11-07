@@ -1,5 +1,6 @@
 package remitano.dacsyle.demo.security;
 
+import antlr.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -20,7 +21,7 @@ public class MyUserDetailService  implements UserDetailsService
 	@Override
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException
 	{
-		Optional<UserModel> user = userRepository.findByUserName(userName);
+		Optional<UserModel> user = userRepository.findByUserName(userName.toLowerCase());
 		user.orElseThrow(() -> new UsernameNotFoundException("User not found: " + userName));
 		return user.map(MyUserDetail::new).get();
 

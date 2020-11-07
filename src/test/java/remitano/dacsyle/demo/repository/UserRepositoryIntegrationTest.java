@@ -1,6 +1,5 @@
-package remitano.dacsyle.demo.integration;
+package remitano.dacsyle.demo.repository;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +10,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 import remitano.dacsyle.demo.model.UserModel;
-import remitano.dacsyle.demo.repository.UserRepository;
 
 import java.util.Optional;
 

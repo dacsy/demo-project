@@ -23,17 +23,20 @@
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h2 class="display-4">Registry User</h2>
     </div>
+    ${errorMsg}
     <form action="/registration" method="POST" enctype="utf8">
         <div class="row">
             <div class="col-md-8 mb-3">
                 <label class="col-md-3 mb-3">User Name</label>
-                <input class="col-md-5 mb-3" id="userName" name="userName"/>
+                <input class="col-md-5 mb-3" id="userName" name="userName" required placeholder="Enter username"
+                       onemptied="this.setCustomValidity('Please input your username.')"/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-8 mb-3">
                 <label class="col-md-3 mb-3">Password</label>
-                <input class="col-md-5 mb-3" id="password" name="password" type="password"/>
+                <input class="col-md-5 mb-3" id="password" name="password" required type="password" placeholder="Enter password"
+                       onemptied="this.setCustomValidity('Please input your password.')"/>
             </div>
         </div>
 
