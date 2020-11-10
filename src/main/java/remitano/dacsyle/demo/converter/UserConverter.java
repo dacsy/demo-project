@@ -1,11 +1,11 @@
 package remitano.dacsyle.demo.converter;
 
 import org.springframework.core.convert.converter.Converter;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import remitano.dacsyle.demo.dto.User;
 import remitano.dacsyle.demo.model.UserModel;
 
-@Service
+@Component
 public class UserConverter implements Converter<UserModel, User>
 {
 	@Override

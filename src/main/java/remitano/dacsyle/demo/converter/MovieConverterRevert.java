@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import remitano.dacsyle.demo.dto.Movie;
 import remitano.dacsyle.demo.model.MovieModel;
@@ -14,7 +15,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-@Service
+@Component
 public class MovieConverterRevert implements Converter<Movie, MovieModel>
 {
 

@@ -27,16 +27,16 @@ public class RegistrationController
 	}
 
 	@RequestMapping(value = "/registration", method = RequestMethod.POST)
-	public String registry(@PathVariable("username") User newUser, Model model) {
+	public String registry(@PathParam("userName") String userName, @PathParam("password") String password, Model model) {
 
-		User existedUser = userService.findByUserName(newUser.getUserName());
+		User existedUser = userService.findByUserName(userName);
 		if (existedUser != null) {
 			return "redirect:/registration";
 		}
 		UserModel userModel = new UserModel();
 		userModel.setActive(Boolean.TRUE);
-		userModel.setPassword(cryptPasswordEncoder.encode(newUser.getPassword()));
-		userModel.setUserName(newUser.getUserName());
+		userModel.setPassword(cryptPasswordEncoder.encode(password));
+		userModel.setUserName(userName);
 		userService.registration(userModel);
 		return "redirect:/login";
 	}
