@@ -1,6 +1,7 @@
 package remitano.dacsyle.demo.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import remitano.dacsyle.demo.converter.MovieConverter;
 import remitano.dacsyle.demo.converter.MovieConverterRevert;
@@ -35,7 +36,7 @@ public class MovieServiceImpl implements MovieService
 	@Override
 	public List<Movie> getAll()
 	{
-		List<MovieModel> movieModels = movieRepository.findAll();
+		List<MovieModel> movieModels = movieRepository.findAll(Sort.by(Sort.Direction.DESC, "createdDate"));
 		return movieConverter.convertAll(movieModels);
 	}
 
