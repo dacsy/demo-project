@@ -2,7 +2,6 @@ package remitano.dacsyle.demo.converter;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import remitano.dacsyle.demo.dto.Movie;
 import remitano.dacsyle.demo.model.MovieModel;
 

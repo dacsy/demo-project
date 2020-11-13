@@ -24,6 +24,7 @@
         <div class="row mb-3" style="height: 390px">
             <div class="col-md-4 order-md-2 mb-4">
                 <h4 class="">${movie.title}</h4>
+                <h6>Description:</h6>
                 <label>${movie.description}</label>
             </div>
             <div class="col-md-8 order-md-1 embed-responsive embed-responsive-21by9">

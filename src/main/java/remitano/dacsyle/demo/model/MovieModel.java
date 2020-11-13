@@ -4,11 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 
 
 @Entity
-public class MovieModel
+public class MovieModel implements Serializable
 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -89,5 +90,13 @@ public class MovieModel
 	public void setYoutubeUrl(String youtubeUrl)
 	{
 		this.youtubeUrl = youtubeUrl;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "MovieModel{" + "id=" + id + ", title='" + title + '\'' + ", youtubeUrl='" + youtubeUrl + '\'' + ", description='"
+				+ description + '\'' + ", embedId='" + embedId + '\'' + ", createdDate=" + createdDate + ", createdBy='" + createdBy
+				+ '\'' + '}';
 	}
 }

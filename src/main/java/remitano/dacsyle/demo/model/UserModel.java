@@ -1,8 +1,9 @@
 package remitano.dacsyle.demo.model;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 
 @Entity
@@ -54,5 +55,12 @@ public class UserModel
 	public void setPassword(String password)
 	{
 		this.password = password;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "UserModel{" + "id=" + id + ", userName='" + userName + '\'' + ", active=" + active + ", password='" + password
+				+ '\'' + '}';
 	}
 }
